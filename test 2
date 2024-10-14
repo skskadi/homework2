@@ -292,7 +292,7 @@ HTML代码
   </head>
   <body>
     <div class="container">
-      <h2><span>Countdown to NCEE</span> 2021</h2>
+      <h2><span>Countdown to NCEE</span> 2025</h2>
       <div class="countdown">
         <div id="day">天</div>
         <div id="hour">时</div>
