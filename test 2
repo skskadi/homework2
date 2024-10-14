@@ -1,4 +1,140 @@
 # homework2
+第一题
+
+:root {
+    --primary-color: #31c27c;        /*定义一个全局变量*/
+  }
+  body {
+    margin: 0;
+    background: #f5f5f5;
+    font-family: Microsoft Yahei;
+    font-size: 14px;
+    /* min-width: 1000px; */          /*设置页面的边距，背景色和字体字号*/
+  }
+  a {
+    text-decoration: none;
+    color: #000;
+  }
+  header {                            /*定义头部高度，垂直居中对齐*/
+    height: 90px;
+    background: white;
+    display: flex;
+    align-items: center;
+  }
+  .header-inner, main {              /*容器内边距和居中对齐*/
+    /* width: 1200px; */
+    padding: 20px;
+    margin: auto;
+  }
+  .tag-list {                        /*标签列表和样式*/
+    margin-top: 50px;
+    margin-bottom: 15px;
+  }
+  .tag-item {                        /*块级元素设置*/
+    display: inline-block;
+    padding: 0 8px;
+    margin-right: 24px;
+    line-height: 26px;
+    color: #000;
+    text-decoration: none;
+  }
+  .tag-active {
+    background: var(--primary-color);   /*背景色*/
+    color: white;
+  }
+  .tag-item:not(.tag-active):hover {
+    color: var(--primary-color);
+  }
+  .nowrap {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .playlist {                         /*播放列表网格布局*/
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px,1fr));
+    gap: 45px 15px;
+    margin-bottom: 45px;
+  }
+  .cover-wrap {                       /*设置封面和悬停效果*/
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    margin-bottom: 15px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+  .cover-img {
+    width: 100%;
+    transition: all 0.75s;            /*过渡动画时间设置*/
+  }
+  .cover-mask {                       /*遮罩层样式设置*/
+    position: absolute;               
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: #000;
+    opacity: 0;
+    transition: all 0.5s;
+  }
+  .cover-play {
+    position: absolute;             /*绝对定位*/
+    left: 50%;
+    top: 50%;
+    margin-left: -35px;
+    margin-top: -35px;
+    opacity: 0;
+    transform: scale(0.7);
+    transition: all 0.5s;
+  }
+  .cover-wrap:hover .cover-mask {
+    opacity: 0.2;                        /*悬停时透明度变化设置*/
+  }
+  .cover-wrap:hover .cover-play {
+    opacity: 1;
+    transform: scale(1);
+  }
+  .cover-wrap:hover .cover-img {
+    transform: scale(1.07);              /*悬停放大倍数*/
+  }
+  .album-title:hover {
+    color: var(--primary-color);
+  }
+  .album-author {                        /*作者文字颜色设置*/
+    color: #999;
+    line-height: 1.6;                    /*行高设置*/
+  }
+  .album-author:hover {
+    color: var(--primary-color);
+  }
+  .album-time {
+    color: #999;
+  }
+  .page {                                /*分页样式*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .page-item {                           /*控制分页项颜色行高，内边距和外边距*/
+    display: inline-block;
+    color: #a2a2a2;
+    line-height: 50px;
+    padding: 0 20px;
+    margin: 10px;
+    font-size: 16px;
+  }
+  .page-current, .page-item:not(.page-more):hover {
+    background: var(--primary-color);
+    color: white;
+  }
+  footer {                               /*页脚样式设置*/
+    margin-top: 60px;
+    background: #333;
+    height: 200px;
+  }
 
 第二题
 
